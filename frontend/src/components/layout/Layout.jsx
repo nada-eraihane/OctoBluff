@@ -2,7 +2,10 @@ import React from 'react';
 
 const Layout = ({ children }) => {
     return (
-        <div className="min-h-screen bg-bg-dark text-white relative overflow-hidden font-inter selection:bg-cyan-primary selection:text-bg-dark">
+        <div
+            className="min-h-screen bg-bg-dark text-white relative overflow-hidden font-inter selection:bg-cyan-primary selection:text-bg-dark"
+            style={{ backgroundColor: '#1a0f2e' }}
+        >
             {/* Cyberpunk Grid Background */}
             <div
                 className="absolute inset-0 pointer-events-none opacity-20"

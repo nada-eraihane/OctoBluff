@@ -3,7 +3,7 @@ import Layout from '../components/layout/Layout';
 import Input from '../components/ui/Input';
 import Button from '../components/ui/Button';
 
-const Auth = () => {
+const Auth = ({ onLogin }) => {
     return (
         <Layout>
             <div className="flex-1 flex flex-col md:flex-row h-full relative z-10">
@@ -23,7 +23,12 @@ const Auth = () => {
                             <Input label="PASSWORD" type="password" placeholder="••••••••" />
 
                             <div className="pt-4">
-                                <Button variant="primary" className="w-full shadow-[0_0_20px_rgba(139,79,255,0.3)]">
+                                <Button
+                                    type="button"
+                                    variant="primary"
+                                    className="w-full shadow-[0_0_20px_rgba(139,79,255,0.3)]"
+                                    onClick={onLogin}
+                                >
                                     ENTER SYSTEM
                                 </Button>
                             </div>
@@ -55,7 +60,12 @@ const Auth = () => {
                             <Input label="CONFIRM PASSWORD" type="password" placeholder="••••••••" />
 
                             <div className="pt-4">
-                                <Button variant="accent" className="w-full">
+                                <Button
+                                    type="button"
+                                    variant="accent"
+                                    className="w-full"
+                                    onClick={onLogin}
+                                >
                                     INITIALIZE PROFILE
                                 </Button>
                             </div>
