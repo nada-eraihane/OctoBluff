@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
             <div className="absolute inset-0 bg-gradient-radial from-transparent via-bg-dark/50 to-bg-dark pointer-events-none"></div>
 
             {/* Main Content */}
-            <div className="relative z-10 container mx-auto px-4 py-8 flex flex-col min-h-screen">
+            <div className="relative z-10 container mx-auto px-2 md:px-4 py-2 flex flex-col min-h-screen overflow-y-auto">
                 {children}
             </div>
         </div>

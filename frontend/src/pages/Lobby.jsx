@@ -34,23 +34,23 @@ const Lobby = ({ onLeaveLobby, onStartGameplay }) => {
 
     return (
         <Layout>
-            <div className="flex flex-col h-full min-h-[80vh] relative z-10 max-w-4xl mx-auto w-full p-4">
+            <div className="flex flex-col h-full relative z-10 max-w-4xl mx-auto w-full p-2">
 
                 {/* Header */}
-                <div className="text-center mb-8 animate-slide-in-top">
-                    <h2 className="text-3xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-primary to-purple-primary animate-pulse">
-                        {gameStarting ? '🚀 GAME STARTING...' : (findingPlayers ? '🔍 FINDING PLAYERS...' : 'LOBBY READY')}
+                <div className="text-center mb-2 animate-slide-in-top">
+                    <h2 className="text-xl md:text-2xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-primary to-purple-primary animate-pulse">
+                        {gameStarting ? '🚀 STARTING...' : (findingPlayers ? '🔍 FINDING...' : 'LOBBY READY')}
                     </h2>
-                    <p className="text-text-gray font-inter mt-2">
-                        {gameStarting ? 'Prepare for mission launch.' : 'Waiting for full squad (4/4)...'}
+                    <p className="text-text-gray font-inter text-xs mt-1">
+                        {gameStarting ? 'Launch imminent.' : 'Waiting (4/4)...'}
                     </p>
-                    <div className="mt-4 inline-block px-6 py-2 bg-bg-card/50 rounded-full border border-cyan-primary/30 text-cyan-primary font-orbitron">
-                        {players.length} / 4 AGENTS JOINED
+                    <div className="mt-2 inline-block px-4 py-1 bg-bg-card/50 rounded-full border border-cyan-primary/30 text-cyan-primary font-orbitron text-sm">
+                        {players.length} / 4 JOINED
                     </div>
                 </div>
 
                 {/* Player List */}
-                <div className="flex-1 overflow-y-auto custom-scrollbar bg-bg-card/30 backdrop-blur-md rounded-2xl border border-white/5 p-4 mb-8 space-y-3 animate-slide-in-right">
+                <div className="flex-1 overflow-y-auto custom-scrollbar bg-bg-card/30 backdrop-blur-md rounded-2xl border border-white/5 p-2 mb-4 space-y-2 animate-slide-in-right">
                     {players.map((player) => (
                         <div
                             key={player.id}
