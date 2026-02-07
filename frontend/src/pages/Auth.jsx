@@ -3,9 +3,6 @@ import Layout from '../components/layout/Layout';
 import Input from '../components/ui/Input';
 import Button from '../components/ui/Button';
 
-// Placeholder for the logo - assuming it will be at this path after generation
-import logoUrl from '../assets/octopus_logo.svg';
-
 const Auth = () => {
     return (
         <Layout>
@@ -14,11 +11,6 @@ const Auth = () => {
                 {/* Left Side: Login */}
                 <div className="flex-1 flex flex-col items-center justify-center p-8 md:pr-12 animate-slide-in-left">
                     <div className="w-full max-w-sm space-y-8">
-                        <div className="md:hidden flex justify-center mb-8">
-                            {/* Mobile Logo View */}
-                            <img src={logoUrl} alt="OctoBluff Logo" className="w-32 h-32 object-contain drop-shadow-[0_0_15px_rgba(0,217,255,0.5)]" />
-                        </div>
-
                         <div className="text-center md:text-left">
                             <h2 className="text-4xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-primary to-white">
                                 LOGIN
@@ -43,13 +35,8 @@ const Auth = () => {
                     </div>
                 </div>
 
-                {/* Center Divider & Logo (Desktop) */}
-                <div className="hidden md:flex flex-col items-center justify-center relative w-24">
-                    <div className="h-full w-px bg-gradient-to-b from-transparent via-cyan-primary/50 to-transparent absolute left-1/2 -translate-x-1/2"></div>
-                    <div className="bg-bg-dark border-2 border-cyan-primary/30 rounded-full p-4 relative z-10 shadow-[0_0_30px_rgba(0,217,255,0.2)]">
-                        <img src={logoUrl} alt="OctoBluff Logo" className="w-24 h-24 object-contain animate-pulse-cyan" />
-                    </div>
-                </div>
+                {/* Center Divider - Simple Line (Desktop) */}
+                <div className="hidden md:block w-px bg-cyan-primary/20 self-stretch my-12"></div>
 
                 {/* Right Side: Register */}
                 <div className="flex-1 flex flex-col items-center justify-center p-8 md:pl-12 animate-slide-in-right">
